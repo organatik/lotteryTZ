@@ -1,0 +1,19 @@
+<div mat-dialog-content>
+  <p>Edit player info</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.surname">
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput [(ngModel)]="data.email">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.phone">
+      </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="{name: data.name, surName: data.surname, email: data.email, phone: data.phone, id: data.id}" cdkFocusInitial>Save</button>
+</div>
